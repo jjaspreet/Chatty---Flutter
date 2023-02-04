@@ -1,4 +1,4 @@
-# chat_app
+# Chatty.
 
 A new Flutter project.
 
