@@ -5,6 +5,7 @@ class WelcomeController extends GetxController{
 
   WelcomeController();
 
-  final title = "Chatty .";
+  final title = "Chatty ";
   final welcomeState = WelcomeState();
 }
+
