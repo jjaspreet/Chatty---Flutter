@@ -2,9 +2,9 @@ import 'package:chat_app/common/routes/names.dart';
 import 'package:chat_app/pages/frame/welcome/state.dart';
 import 'package:get/get.dart';
 
-class WelcomeController extends GetxController{
+class MessageController extends GetxController{
 
-  WelcomeController();
+  MessageController();
 
   final title = "Chatty ";
   final welcomeState = WelcomeState();

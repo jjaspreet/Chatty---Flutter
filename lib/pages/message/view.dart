@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class WelcomePage extends GetView<WelcomeController> {
-  const WelcomePage({Key? key}) : super(key: key);
+import 'controller.dart';
+
+class MessagePage extends GetView<MessageController> {
+  const MessagePage({Key? key}) : super(key: key);
 
   Widget _buildPageHeader(String title){
 

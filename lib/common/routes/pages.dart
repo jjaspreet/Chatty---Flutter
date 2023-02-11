@@ -1,25 +1,36 @@
-
-import 'package:flutter/material.dart';
-
+import 'package:chat_app/pages/frame/welcome/index.dart';
+import 'package:chat_app/pages/message/index.dart';
 import 'package:get/get.dart';
 
+import '../middleware/router_auth.dart';
 import 'names.dart';
-import 'package:chat_app/pages/frame/welcome/index.dart';
 
 class AppPages {
   static const INITIAL = AppRoutes.INITIAL;
+
 //  static final RouteObserver<Route> observer = RouteObservers();
   static List<String> history = [];
 
   static final List<GetPage> routes = [
-    // 免登陆
+
+    // Welcome Page
     GetPage(
       name: AppRoutes.INITIAL,
       page: () => const WelcomePage(),
       binding: WelcomeBinding(),
     ),
-    ];
-  /*
+
+    //Message Page
+    GetPage(
+      name: AppRoutes.Message,
+      page: () => const MessagePage(),
+      binding: MessageBinding(),
+      middlewares: [
+        RouteAuthMiddleware(priority: 1),
+      ],
+    ),
+  ];
+/*
     GetPage(
       name: AppRoutes.SIGN_IN,
       page: () => SignInPage(),
@@ -45,8 +56,8 @@ class AppPages {
     // 首页
     GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
     //消息
-    GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding(),middlewares: [
-       RouteAuthMiddleware(priority: 1),
+
+
      ],),
     //我的
     GetPage(name: AppRoutes.Profile, page: () => ProfilePage(), binding: ProfileBinding()),
@@ -58,10 +69,4 @@ class AppPages {
     GetPage(name: AppRoutes.VideoCall, page: () => VideoCallPage(), binding: VideoCallBinding()),
   ];*/
 
-
-
-
-
-
 }
-
