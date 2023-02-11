@@ -2,6 +2,7 @@ import 'package:chat_app/pages/frame/welcome/index.dart';
 import 'package:chat_app/pages/message/index.dart';
 import 'package:get/get.dart';
 
+import '../../pages/frame/sign_in/index.dart';
 import '../middleware/router_auth.dart';
 import 'names.dart';
 
@@ -12,7 +13,6 @@ class AppPages {
   static List<String> history = [];
 
   static final List<GetPage> routes = [
-
     // Welcome Page
     GetPage(
       name: AppRoutes.INITIAL,
@@ -29,14 +29,15 @@ class AppPages {
         RouteAuthMiddleware(priority: 1),
       ],
     ),
-  ];
-/*
+
+    //Sign In Page
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
-
+  ];
+/*
     // 需要登录
     // GetPage(
     //   name: AppRoutes.Application,

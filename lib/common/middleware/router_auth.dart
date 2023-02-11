@@ -16,7 +16,7 @@ class RouteAuthMiddleware extends GetMiddleware{
     if (route == AppRoutes.SIGN_IN || route == AppRoutes.INITIAL) {
       return null;
     } else {
-      Future.delayed(const Duration(seconds: 3), () {
+      Future.delayed(const Duration(seconds: 1), () {
         Get.snackbar("Oops!!", 'You need to Sign in');
       });
       return const RouteSettings(name: AppRoutes.SIGN_IN);
